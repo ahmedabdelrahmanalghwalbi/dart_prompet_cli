@@ -1,0 +1,6 @@
+# my project name
+name: prompter
+#my project version
+version: 0.0.1
+#my project description
+description: Library to create CLI wizard
