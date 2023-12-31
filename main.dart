@@ -1,17 +1,28 @@
-import 'lib/src/models/option.dart';
-import 'lib/src/terminal.dart';
+import './lib/prompter_sg.dart';
+
+final Prompter _prompter = const Prompter();
 
 void main() {
-  Termainal termainal = Termainal();
-  termainal.printPrompet();
-  termainal.clearOperatingSystemScreen();
-  String? name = termainal.collectInput();
-  print(name);
-  termainal.printOption(options: [
-    OptionModel(label: "option 1", value: 1),
-    OptionModel(label: "option 2", value: 2),
-    OptionModel(label: "option 3", value: 3),
-    OptionModel(label: "option 4", value: 4),
-    OptionModel(label: "option 5", value: 5),
-  ]);
+  List<OptionModel> options = [
+    OptionModel(label: "I Want First Option", value: 1),
+    OptionModel(label: "I Want Second Option", value: 2),
+    OptionModel(label: "I Want Third Option", value: 3),
+    OptionModel(label: "I Want Fourth Option", value: 4),
+    OptionModel(label: "I Want Fifth Option", value: 5),
+  ];
+
+  final OptionModel? selectedOption = _prompter.buildQuestion(
+      prompt: "Question :- Select Your Option Please .. ?", options: options);
+  if (selectedOption != null) {
+    stdout.writeln(selectedOption.toString());
+  } else {
+    stdout.writeln("no selected Option found yet !!!!!!!!!!!!");
+  }
+  bool? liked = _prompter
+      .buildBinaryQuestion(prompt: "Do You Like This Library ?", options: []);
+  if (liked == true) {
+    stdout.writeln("Thanks for your Answer !!");
+  } else {
+    stdout.writeln("Oops, I will work to make this library like you !");
+  }
 }
