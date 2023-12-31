@@ -31,7 +31,6 @@ class Termainal {
     options.asMap().forEach((index, option) {
       print(option.toStringWithIndex(index: index.toString()));
     });
-    stdout.writeln("Please Enter your option\n");
-    stdout.writeln(">");
+    stdout.writeln("Please Enter your option >");
   }
 }
