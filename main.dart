@@ -1,4 +1,4 @@
-import './lib/prompter_sg.dart';
+import 'lib/alghwalbi_prompter_cli.dart';
 
 final Prompter _prompter = const Prompter();
 

@@ -10,7 +10,7 @@ homepage: https://www.linkedin.com/in/ahmed-abdelrahman-ali-96b249201/
 environment:
   sdk: "^3.1.5"
 # my project name
-name: prompter
+name: alghwalbi_prompter_cli
 #my project version
 version: 1.0.0
 #my project description
