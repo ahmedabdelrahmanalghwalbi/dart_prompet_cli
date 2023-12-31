@@ -4,7 +4,7 @@ import '../src/models/option.dart';
 class Termainal {
   const Termainal();
   //testing printing lines inside my terminal
-  void printPrompet({String str = "ahmed abdelrahman"}) {
+  void printPrompet({String str = " "}) {
     stdout.writeln(str);
   }
 
