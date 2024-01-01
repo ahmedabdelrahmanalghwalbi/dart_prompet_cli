@@ -16,7 +16,7 @@ class Prompter {
     _termainal.printPrompet(str: "$prompt (Y/N)");
     _termainal.printOption(options: []);
     final input = _termainal.collectInput();
-    return input?.contains('y');
+    return input.toLowerCase().contains('y');
   }
 
   //this method build question and it's options
@@ -25,14 +25,11 @@ class Prompter {
     try {
       _termainal.printPrompet(str: prompt);
       _termainal.printOption(options: options);
-      _termainal.collectInput();
       final selectedInput = _termainal.collectInput();
-      if (selectedInput != null) {
-        if (int.tryParse(selectedInput) != null) {
-          int? index = int.tryParse(selectedInput);
-          if (index != null) {
-            return options[index];
-          }
+      if (int.tryParse(selectedInput) != null) {
+        int? index = int.tryParse(selectedInput);
+        if (index != null) {
+          return options[index];
         }
       }
       return null;
