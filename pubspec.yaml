@@ -16,6 +16,6 @@ environment:
 # my project name
 name: alghwalbi_prompter_cli
 #my project version
-version: 1.0.4
+version: 1.0.5
 #my project description
 description: Library to create CLI wizard
